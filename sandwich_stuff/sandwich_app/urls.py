@@ -1,9 +1,9 @@
 from django.urls import path
-from sandwich_app.views import SandwichappView, IngredientsView, SampleSandwichView, EntireMenuView
+from sandwich_app.views import SandwichappView, IngredientsView, SandwichGeneratorView, MenuView
 
 urlpatterns = [
-    path('', SandwichappView.as_view(), name='sandwich_home'),
+    path('', SandwichappView.as_view(), name='sandwich'),
     path('ingredients/<str:ingredient_type>', IngredientsView.as_view(), name='ingredients_list'),
-    path('sample/', SampleSandwichView.as_view(), name='sample_sandwich'),
-    path('menu/', EntireMenuView.as_view(), name='entire_sandwich_menu'),
+    path('random', SandwichGeneratorView.as_view(), name='sandwich_generator'),
+    path('menu/', MenuView.as_view(), name='menu'),
 ]

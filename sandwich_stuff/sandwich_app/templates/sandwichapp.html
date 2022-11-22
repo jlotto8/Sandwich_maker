@@ -12,11 +12,17 @@
     </ul>
         
     <p>Let's eat! Click below to create your own sandwich</p>
-    <button><a href="sandwich/sample">Make a Sandwich</a></button>
+    <form action="{% url 'sandwich_generator' %}">
+        <input type="submit" value="Lets Eat!" />
+    </form>
+
+    <p>Click below to see the entire menu</p>
+    <button><a href="/sandwich/menu">Entire Menu </a></button>
+    <!-- <button><a href="sandwich/sample">Make a Sandwich</a></button> -->
 
     <!-- <button type="button"> Make a Sandwich </button> -->
 
-    <p>Click below to see the entire menu</p>
-    <button><a href="sandwich/menu">Entire Menu</button>
+    <!-- <p>Click below to see the entire menu</p>
+    <button><a href="sandwich/menu">Entire Menu</button> -->
 </body>
 </html>
